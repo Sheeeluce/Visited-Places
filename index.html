@@ -4,21 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
   <title>Visit Tracker.</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main class="place-list-container" id="place-display">
     <div class="empty">
       <h2>No places visited.</h2>
       <p>Add new place.</p>
-
-      
+      <!--Hidden Card-->
           <div id="placeCard" class="card hidden">
+              <label for="category">
+              <select name="category" id="category">
+              <option value="work">Work 💼</option>
+              <option value="leisure">Leisure 🛍</option>
+              <option value="school">School 🏫</option>
+              </select>
+              </label> 
+
               <input placeholder="Place name">
               <input placeholder="Location">
               <input placeholder="Landmarks">
               <input placeholder="Time of year">
               <textarea placeholder="Notes"></textarea>
-
           </div>
           <button id="addPlaceBtn">Add New Place</button>
     </div>
