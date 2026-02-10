@@ -8,8 +8,6 @@ addBtn.addEventListener("click", () => {
   card.classList.toggle("hidden");
 });
   
-const addPlace = document.getElementById("addPlaceBtn");
-const placeList = document.getElementById("place-list");
 
 saveBtn.addEventListener("click", () => {
   const countryName = document.getElementById("countryname").value;
@@ -18,7 +16,7 @@ saveBtn.addEventListener("click", () => {
   const category = document.getElementById("category").value;
   const date = document.getElementById("date").value;
   const notes = document.getElementById("notes").value;
-}) 
+
 
 const newCard = document.createElement("div");
 newCard.classList.add("place-card");
@@ -36,8 +34,11 @@ newCard.querySelector(".delete-btn").addEventListener("click", () => {
     newCard.remove();
   });
 
-
 placeList.appendChild(newCard);
+card.classList.add("hidden");
+});
+
+
 
 
 
