@@ -8,9 +8,11 @@
   border-radius: 10px;
   margin-top: 15px;
   position: relative;
-  width: 70%;
+  width: 40%;
   text-align: center;
   margin-top: 0;
+  align-items: center;
+  
 }
 
 button {
@@ -23,11 +25,34 @@ button {
   margin-top: 3%  ;
   cursor: pointer;
   transition: transform .2s ease; 
-  justify-content: center;
+  align-items: center;
 }
 
 button:hover {
   background: #000;
   transform: scale(1.05);
+}
+
+label {
+  display: block;
+  font-size: 2.0rem;
+  font-weight: 400;
+  margin-bottom: 0%;
+  margin-top: 2%;
+}
+
+input, select {
+  width: 70%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
