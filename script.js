@@ -1,16 +1,17 @@
-const btn = document.getElementById("addPlaceBtn");
+const addBtn = document.getElementById("addPlaceBtn");
 const card = document.getElementById("placeCard");
-card.classList.add("placeCard");
+const saveBtn = document.getElementById("savePlaceBtn");
+const placeList = document.getElementById("place-list");
 
 
-btn.addEventListener("click", () => {
+addBtn.addEventListener("click", () => {
   card.classList.toggle("hidden");
 });
   
 const addPlace = document.getElementById("addPlaceBtn");
 const placeList = document.getElementById("place-list");
 
-addPlace.addEventListener("click", () => {
+saveBtn.addEventListener("click", () => {
   const countryName = document.getElementById("countryname").value;
   const location = document.getElementById("location").value;
   const landmarks = document.getElementById("landmarks").value;
@@ -19,11 +20,27 @@ addPlace.addEventListener("click", () => {
   const notes = document.getElementById("notes").value;
 }) 
 
-card.innerHTML = `<h3>${countryName}</h3>
+const newCard = document.createElement("div");
+newCard.classList.add("place-card");
+
+newCard.innerHTML =
+`<h3>${countryName}</h3>
 <p><strong>Category:</strong>${category}</p>
 <p><strong>Location:</strong>${location}</p>
-<p><strong>Date</strong>${date}</p>
-<p><strong>Landmarks:</strong> ${landmarks}</p>`
+<p><strong>Date:</strong>${date}</p>
+<p><strong>Landmarks:</strong>${landmarks}</p>
+<p>${notes}</p>
+<button class ="delete-btn">Delete</button>`;
+
+newCard.querySelector(".delete-btn").addEventListener("click", () => {
+    newCard.remove();
+  });
+
+
+placeList.appendChild(newCard);
+
+
+
 
 
 
