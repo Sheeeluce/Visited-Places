@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visit Tracker.</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,18 +14,22 @@
       <p>Add new place.</p>
       <!--Hidden Card-->
           <div id="placeCard" class="card hidden">
-              <label for="category">
+              <label for="category">Category</label>
               <select name="category" id="category">
               <option value="work">Work 💼</option>
               <option value="leisure">Leisure 🛍</option>
               <option value="school">School 🏫</option>
               </select>
-              </label> 
-
+               
+              <label for="placename">Place Name</label>
               <input placeholder="Place name">
+              <label for="location">Location</label>
               <input placeholder="Location">
+              <label for="landmarks">Landmarks</label>
               <input placeholder="Landmarks">
+              <label for="time">Time</label>
               <input placeholder="Time of year">
+              <label for="notes">Notes</label>
               <textarea placeholder="Notes"></textarea>
           </div>
           <button id="addPlaceBtn">Add New Place</button>

@@ -3,9 +3,31 @@
 }
 
 .card {
-  background: #1c1c1c;
+  background: #a6afad;
   padding: 15px;
   border-radius: 10px;
   margin-top: 15px;
+  position: relative;
+  width: 70%;
+  text-align: center;
+  margin-top: 0;
+}
+
+button {
+  width: 70%;
+  border-radius: 10px;
+  background: #464545;
+  color: white;
+  border: none;
+  padding: 14px;
+  margin-top: 3%  ;
+  cursor: pointer;
+  transition: transform .2s ease; 
+  justify-content: center;
+}
+
+button:hover {
+  background: #000;
+  transform: scale(1.05);
 }
 
