@@ -15,6 +15,10 @@
   
 }
 
+body {
+  color: #274156;
+}
+
 button {
   width: 70%;
   border-radius: 10px;
