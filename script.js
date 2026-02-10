@@ -5,6 +5,9 @@ btn.addEventListener("click", () => {
   card.classList.toggle("hidden");
 });
 
+const emptyState = document.querySelector(".empty");
+emptyState.style.display = "none";
+
 const addPlace = document.getElementById("addPlaceBtn");
 const placeList = document.getElementById("place-list");
 
