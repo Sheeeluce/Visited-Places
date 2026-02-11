@@ -17,6 +17,22 @@ saveBtn.addEventListener("click", () => {
   const date = document.getElementById("date").value;
   const notes = document.getElementById("notes").value;
 
+const place = {
+  countryName,
+  location,
+  landmarks,
+  category,
+  date,
+  notes
+  };
+let places = JSON.parse(localStorage.getItem("places")) || [];
+places.push(place);
+localStorage.setItem("places", JSON.stringify(places));
+
+displayPlace(place);
+
+card.classList.add("hidden");
+});
 
 const newCard = document.createElement("div");
 newCard.classList.add("place-card");
@@ -35,8 +51,6 @@ newCard.querySelector(".delete-btn").addEventListener("click", () => {
   });
 
 placeList.appendChild(newCard);
-card.classList.add("hidden");
-});
 
 
 
